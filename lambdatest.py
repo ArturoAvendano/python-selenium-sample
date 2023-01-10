@@ -6,7 +6,8 @@ from selenium.webdriver.common.by import By
 
 username = os.getenv("LT_USERNAME")  # Replace the username
 access_key = os.getenv("LT_ACCESS_KEY")  # Replace the access key
-
+print(username)
+print(access_key)
 
 class FirstSampleTest(unittest.TestCase):
     # Generate capabilites from here: https://www.lambdatest.com/capabilities-generator/
@@ -34,7 +35,7 @@ class FirstSampleTest(unittest.TestCase):
         # Note: for additional capabilities navigate to https://www.lambdatest.com/support/docs/test-settings-options/
 
         self.driver = webdriver.Remote(
-            command_executor="http://{}:{}@hub.lambdatest.com/wd/hub".format(
+            command_executor="https://{}:{}@hub.lambdatest.com/wd/hub".format(
                 username, access_key),
             desired_capabilities=desired_caps)
 
