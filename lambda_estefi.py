@@ -21,6 +21,7 @@ class FirstSampleTest(unittest.TestCase):
                 "selenium_version": "4.0.0",
                 "console": 'true',  # Enable or disable console logs
                 "network": 'true',  # Enable or disable network logs
+                "terminal": 'true', 
                 #Enable Smart UI Project
                 #"smartUI.project": "<Project Name>"
             },
