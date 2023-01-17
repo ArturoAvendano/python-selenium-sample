@@ -58,7 +58,8 @@ class FirstSampleTest(unittest.TestCase):
         print('Loading URL')
         driver.get("https://estandar-qa.sigea.cl")
         time.sleep(5)
-
+        Usuario = os.getenv("Usuario_Gisma")  # Replace the username
+        Clave = os.getenv("Password_Gisma")  # Replace the access key
         # Inicio de sesion
         driver.find_element(By.CSS_SELECTOR, "input[placeholder='Usuario']").send_keys(Usuario) 
         time.sleep(2)
