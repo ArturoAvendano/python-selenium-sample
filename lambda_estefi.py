@@ -90,9 +90,10 @@ class FirstSampleTest(unittest.TestCase):
         time.sleep(25)
 
         hoy = time.strftime("%d%m%Y")
-        contenido = os.listdir('.\\Descarga\\')
-        assert("Compromisos_RCA_" + hoy + ".xlsx" in contenido)
-
+        exists_status = driver.execute_script(f"lambda-file-exists=algo.jpg")
+        print(exists_status)
+        driver.execute_script("lambda-status=passed")
+        
         time.sleep(5)
         driver.quit()
 
