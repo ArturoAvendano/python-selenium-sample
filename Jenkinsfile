@@ -8,7 +8,7 @@ pipeline {
   stage('Test') {
     steps {
       sh 'sleep 5' 
-      sh 'python3 lambdatest.py'
+      sh 'python3 lambda_estefi.py'
     }
   }
 
